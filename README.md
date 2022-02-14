@@ -52,29 +52,29 @@ q2 ---> q2 [ "←", "→", "↑", "↓" ]
 
 ## Лексер
 
-[Лексер](https://github.com/Fawentus/describing-finite-machine/Lex/myLex.py) написан на языке Python, использован ply.lex. Консольное приложение запускается командой: 
+[Лексер](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/myLex.py) написан на языке Python, использован ply.lex. Консольное приложение запускается командой: 
 ```
 python3.8 myLex.py "<name_file>"
 ```
 
-Например, так запускается [мой "нулевой" тест](https://github.com/Fawentus/describing-finite-machine/Lex/ex):
+Например, так запускается [мой "нулевой" тест](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex):
 ```
 python3.8 myLex.py "ex"
 ```
-Этот код не строит осмысленный автомат, я включила туда то, что могло бы продемонстрировать все возможности моего лексера. [Это](https://github.com/Fawentus/describing-finite-machine/Lex/ex.out) то, что будет в выходном файле после работы программы (значения токенов типа `STR` выводятся с отбрасыванием `""`).
+Этот код не строит осмысленный автомат, я включила туда то, что могло бы продемонстрировать все возможности моего лексера. [Это](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex.out) то, что будет в выходном файле после работы программы (значения токенов типа `STR` выводятся с отбрасыванием `""`).
   
 Это примеры работы лексера на тестах из прошлого домашнего задания:
   
-  [Тест 1](https://github.com/Fawentus/describing-finite-machine/Lex/ex1) - [результат работы лексера](https://github.com/Fawentus/describing-finite-machine/Lex/ex1.out)
+  [Тест 1](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex1) - [результат работы лексера](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex1.out)
   
-  [Тест 2](https://github.com/Fawentus/describing-finite-machine/Lex/ex2) - [результат работы лексера](https://github.com/Fawentus/describing-finite-machine/Lex/ex2.out)
+  [Тест 2](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex2) - [результат работы лексера](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex2.out)
   
-  [Тест 3](https://github.com/Fawentus/describing-finite-machine/Lex/ex3) - [результат работы лексера](https://github.com/Fawentus/describing-finite-machine/Lex/ex3.out)
+  [Тест 3](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex3) - [результат работы лексера](https://github.com/Fawentus/describing-finite-machine/blob/master/Lex/ex3.out)
 
 
 ## Парсер
 
-[Мой синтаксический анализатор](https://github.com/Fawentus/describing-finite-machine/Parse/parse.py) реализован на языке Python, с помощью генератора синтаксических анализаторов семейства yacc.
+[Мой синтаксический анализатор](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/parse.py) реализован на языке Python, с помощью генератора синтаксических анализаторов семейства yacc.
 
 Консольное приложение запускается командой: 
 ```
@@ -92,15 +92,15 @@ python3.8 parse.py "ex1"
 
 Тесты:
 
-1) [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/ex1) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/ex1.out)
-2) [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/ex2) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/ex2.out)
-3) [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/ex3) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/ex3.out)
+1) [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/ex1) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/ex1.out)
+2) [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/ex2) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/ex2.out)
+3) [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/ex3) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/ex3.out)
 
 ## Тесты:
 
 1) Полные детерминированные автоматы, у которых есть начальное состояние, все состояния и символы уникальны приведены в задании 2
-2) Автомат, не имеющий однозначно определенного начального состояния: [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/have_not_initial_state) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/have_not_initial_state.out)
-3) Автомат, символы которого не уникальны: [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_unique_symbols) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_unique_symbols.out)
-4) Неполный автомат: [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_complete) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_complete.out)
-5) Недетерминированный автомат: [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_deterministic) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_deterministic.out)
-6) Автомат, состояния которого не уникальны: [входные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_unique_states) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/Parse/not_unique_states.out)
+2) Автомат, не имеющий однозначно определенного начального состояния: [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/have_not_initial_state) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/have_not_initial_state.out)
+3) Автомат, символы которого не уникальны: [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_unique_symbols) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_unique_symbols.out)
+4) Неполный автомат: [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_complete) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_complete.out)
+5) Недетерминированный автомат: [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_deterministic) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_deterministic.out)
+6) Автомат, состояния которого не уникальны: [входные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_unique_states) - [выходные данные](https://github.com/Fawentus/describing-finite-machine/blob/master/Parse/not_unique_states.out)
