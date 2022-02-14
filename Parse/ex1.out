@@ -1,0 +1,21 @@
+Alphabet:
+    ['←', '→', '↑', '↓']
+States:
+    name: q0, terminality: False, description: ''
+    name: q1, terminality: False, description: 'одна → подряд'
+    name: q2, terminality: False, description: 'две → подряд'
+    name: q3, terminality: True, description: 'две → и одна ↑ подряд найдены - нашли полянку'
+    name: q4, terminality: False, description: 'ноль → подряд'
+Edges:
+    state from: q0, state to: q1, symbols: ['→']
+    state from: q0, state to: q4, symbols: ['←', '↑', '↓']
+    state from: q1, state to: q2, symbols: ['→']
+    state from: q1, state to: q4, symbols: ['←', '↑', '↓']
+    state from: q2, state to: q2, symbols: ['→']
+    state from: q2, state to: q3, symbols: ['↑']
+    state from: q2, state to: q4, symbols: ['←', '↓']
+    state from: q3, state to: q3, symbols: ['←', '→', '↑', '↓']
+    state from: q4, state to: q1, symbols: ['→']
+    state from: q4, state to: q4, symbols: ['←', '↑', '↓']
+Initial state:
+    q0

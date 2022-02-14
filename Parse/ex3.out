@@ -1,0 +1,20 @@
+Alphabet:
+    ['a', 'b', 'c', 'd', '!', '?']
+States:
+    name: q0, terminality: False, description: ''
+    name: q1, terminality: True, description: 'есть ?'
+    name: q2, terminality: True, description: 'на конце !'
+    name: q3, terminality: False, description: ''
+Edges:
+    state from: q0, state to: q1, symbols: ['?']
+    state from: q0, state to: q2, symbols: ['!']
+    state from: q0, state to: q3, symbols: ['a', 'b', 'c', 'd']
+    state from: q1, state to: q1, symbols: ['a', 'b', 'c', 'd', '!', '?']
+    state from: q2, state to: q1, symbols: ['?']
+    state from: q2, state to: q2, symbols: ['!']
+    state from: q2, state to: q3, symbols: ['a', 'b', 'c', 'd']
+    state from: q3, state to: q1, symbols: ['?']
+    state from: q3, state to: q2, symbols: ['!']
+    state from: q3, state to: q3, symbols: ['a', 'b', 'c', 'd']
+Initial state:
+    q0
